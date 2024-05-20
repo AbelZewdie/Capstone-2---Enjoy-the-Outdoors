@@ -1,15 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   font-family: 'poppins', sans-serif;
   box-sizing: border-box;
 }
-body{
-  background: #262a2f;
-  color: #333;
+
+a {
+  text-decoration: none;  /* Remove underline from links */
+  color: #007bff;  /* Blue color for links */
 }
-.search-box{
-width: 600px;
-background: #fff;
-margin: 200px auto 0;
+
+a:hover {
+  color: #0056b3;  /* Change link color on hover */
+}
+
+h1, h2 {
+  margin: 1rem 0;  /* Add some margin for headings */
+}
+
+.filters {
+  display: flex;  /* Arrange filter labels side-by-side */
+  margin-bottom: 1rem;  /* Add space below filters */
+}
+
+.filters label {
+  margin-right: 1rem;  /* Add space between filter labels */
+}
+#parkTypeLabel {
+  display: none;  /* Hide park type label initially */
+}
+
+#results {
+  border: 1px solid #ddd;  /* Add a border for the results container */
+  padding: 1rem;  /* Add padding inside the results container */
+  
 }

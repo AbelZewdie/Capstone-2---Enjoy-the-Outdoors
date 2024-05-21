@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awsome/5.14.0/css/all.min.css">
   <script src="../scripts/main.js"></script>
+  <script src="../scripts/mountains.js"></script>
+  <script src="../slideJS/slide.js"></script>
 </head>
 
 <body>
@@ -29,8 +31,8 @@
   </header>
 
   <section class="home">
-    <video class="video-slide active" src="../videos/6.mp4" autoplay muted loop></video>
-    <video class="video-slide" src="../videos/1.mp4" autoplay muted loop></video>
+    <video class="video-slide active" src="../videos/8.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="../videos/4.mp4" autoplay muted loop></video>
     <video class="video-slide" src="../videos/2.mp4" autoplay muted loop></video>
     <video class="video-slide" src="../videos/3.mp4" autoplay muted loop></video>
     <video class="video-slide" src="../videos/5.mp4" autoplay muted loop></video>
@@ -89,47 +91,6 @@
   </section>
 
 
-<script type="text/javascript">
-  //Javascript of responsive navigation menu
-const menuBtn = document.querySelector(".menu-btn");
-const navigation = document.querySelector(".navigation");
 
-menuBtn.addEventListener("click", () =>{
-menuBtn.classList.toggle("active");
-navigation.classList.toggle("active");
-});
-
-
-//Javascript for video slider navigation
-const btns = document.querySelectorAll(".nav-btn");
-const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".content");
-
-var sliderNav = function(manual){
-btns.forEach((btn) =>{
-btn.classList.remove("active");
-});
-
-slides.forEach((slide) =>{
-slide.classList.remove("active");
-});
-
-contents.forEach((content) =>{
-  content.classList.remove("active");
-});
-
-
-  btns[manual].classList.add("active");
-  slides[manual].classList.add("active");
-  contents[manual].classList.add("active");
-}
-
-btns.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    sliderNav(i);
-  });
-});
-
-</script>
 </body>
 </html>

@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awsome/5.14.0/css/all.min.css">
-  <script src="./scripts/main.js"></script>
+  <script src="../scripts/main.js"></script>
 </head>
+
 <body>
   <header>
-    <a href="#" class="brand">Abel Horizons</a>
+    <a href="./index.html" class="brand">Abel Horizons</a>
+<div class="menu-btn"></div>
+
     <div class="navigation">
       <div class="navigation-items">
         <a href="./index.html">Home</a>
@@ -22,16 +28,108 @@
     </div>
   </header>
 
-<section class="home">
-<div class="content">
-  <h1>Wonderful.<br><span>Island</span></h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere vero, repellendus omnis accusamus similique qui?</p>
-<a href="#">Read More</a>
-</div>
-<div class="media-icons">
-  <a href="#"> <i class="fab fa"></i> </a>
-</div>
-</section>
+  <section class="home">
+    <video class="video-slide active" src="../videos/6.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="../videos/1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="../videos/2.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="../videos/3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="../videos/5.mp4" autoplay muted loop></video>
 
+    <div class="content active">
+      <h1>Wonderful.<br><span>Island</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt
+        assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam
+        unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere
+        vero, repellendus omnis accusamus similique qui?</p>
+      <a href="#">Read More</a>
+    </div>
+    
+    <div class="content">
+      <h1>Camping.<br><span>Enjoy</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt
+        assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam
+        unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere
+        vero, repellendus omnis accusamus similique qui?</p>
+      <a href="#">Read More</a>
+    </div>
+    
+    <div class="content">
+      <h1>Adventures.<br><span>Off Road</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt
+        assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam
+        unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere
+        vero, repellendus omnis accusamus similique qui?</p>
+      <a href="#">Read More</a>
+    </div>
+    
+    <div class="content">
+      <h1>Road Trip.<br><span>Together</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt
+        assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam
+        unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere
+        vero, repellendus omnis accusamus similique qui?</p>
+      <a href="#">Read More</a>
+    </div>
+    
+    <div class="content">
+      <h1>Feel Nature.<br><span>Relax</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse molestiae, deserunt praesentium est, nesciunt
+        assumenda architecto ea suscipit quam inventore reiciendis quibusdam iure at iusto, nam sequi totam. Aperiam
+        unde facere corrupti aut consequatur nulla dolor. Nisi maxime, possimus labore doloribus, est cumque facere
+        vero, repellendus omnis accusamus similique qui?</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+
+
+<script type="text/javascript">
+  //Javascript of responsive navigation menu
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () =>{
+menuBtn.classList.toggle("active");
+navigation.classList.toggle("active");
+});
+
+
+//Javascript for video slider navigation
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
+
+var sliderNav = function(manual){
+btns.forEach((btn) =>{
+btn.classList.remove("active");
+});
+
+slides.forEach((slide) =>{
+slide.classList.remove("active");
+});
+
+contents.forEach((content) =>{
+  content.classList.remove("active");
+});
+
+
+  btns[manual].classList.add("active");
+  slides[manual].classList.add("active");
+  contents[manual].classList.add("active");
+}
+
+btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    sliderNav(i);
+  });
+});
+
+</script>
 </body>
 </html>

@@ -2,43 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parks</title>
-    <link rel="stylesheet" href="./styles/main.css">
-    <script src="./scripts/main.js"></script>
-    <link rel="stylesheet" href="../styles/parks.css">
-    <script src="./scripts/parkTypeData.js"></script>
-    <script src="./scripts/nationalParkData.js"></script>
-    <script src="./scripts/locationData.js"></script>
-    <script src="../slideJS/slide.js"></script>
-    <script src="./scripts/parks.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parks</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="../scripts/main.js"></script>
+  <link rel="stylesheet" href="../styles/parks.css">
+  <script src="../scripts/parkTypeData.js"></script>
+  <script src="../scripts/nationalParkData.js"></script>
+  <script src="../scripts/locationData.js"></script>
+  <script src="../slideJS/slide.js"></script>
+  <script src="../scripts/parks.js"></script>
 </head>
 
 <body>
-  
-    <header>
-      <a href="./index.html" class="brand">Abel Horizons</a>
-  <div class="menu-btn"></div>
-  
-      <div class="navigation">
-        <div class="navigation-items">
-          <a href="./index.html">Home</a>
-          <a href="./mountain.html">Mountains</a>
-          <a href="./park.html">Parks</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
-        </div>
+
+  <header>
+    <a href="./index.html" class="brand">Abel Horizons</a>
+    <div class="menu-btn"></div>
+
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="./index.html">Home</a>
+        <a href="./mountain.html">Mountains</a>
+        <a href="./park.html">Parks</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
       </div>
-    </header>
-  
-    <section class="home">
-      <video class="video-slide active" src="../videos/3.mp4" autoplay muted loop></video>
-    </section>
-    
-    
-  
-  
-    
-  </body>
-  </html>
+    </div>
+  </header>
+
+  <section class="home">
+    <video class="video-slide active" src="../videos/3.mp4" autoplay muted loop></video>
+
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- Dropdown option -->
+    <label>
+      <input type="radio" name="searchBy" id="locationRadio" checked>
+      Location(State)
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="searchBy" id="parkTypeRadio">
+      Park Type
+    </label>
+    <div class="filters">
+      <label id="locationLabel">
+        Location:
+        <select name="locations" id="locations"></select>
+      </label>
+      <label id="parkTypeLabel" style="display:none">
+        Park Type:
+        <select name="parkTypes" id="parkTypes"></select>
+      </label>
+    </div>
+    <div id="results">?</div>
+    <!-- /////////////////////////////////////////////////////////// -->
+
+
+
+
+  </section>
+</body>
+
+</html>

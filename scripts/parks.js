@@ -1,9 +1,8 @@
 function getPark(park) {
   const element = document.createElement("div");
   element.classList.add("park");
-  element.innerHTML = `
-<br> <hr>
-  <h4>Location: ${park.LocationName}</h4>
+  element.innerHTML = `<hr><br>
+  <h4 class:"spacing">Location: ${park.LocationName}</h4>
   <h5>ID: ${park.LocationID}</h5>
   <div>State: ${park.State}</div>
 `;
@@ -11,7 +10,7 @@ function getPark(park) {
       const link = park.Visit;
       const text = park.LocationName;
       element.innerHTML += `
-  <div><a href="${link}" class="visit-site"> ${text} </a></div>
+  <div>Link: <a href="${link}" class="visit-site"> ${text} </a></div><br>
   `;
   };
   return element;

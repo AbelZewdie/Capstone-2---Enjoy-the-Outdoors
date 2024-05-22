@@ -340,7 +340,7 @@ section label{
 
 .filters, #results{
   text-align: left;
-  margin-top: 2rem;
+  margin: 0 auto;;
 }
 
 #parkTypes option,
@@ -352,3 +352,4 @@ section label{
   color: #029aff;
   /* background-color: #fff; */
 }
+

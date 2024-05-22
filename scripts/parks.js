@@ -1,12 +1,11 @@
 function getPark(park) {
   const element = document.createElement("div");
   element.classList.add("park");
-
   element.innerHTML = `
-  <hr>
-  <h3>${park.LocationName}</h3>
-  <h4>${park.LocationID}</h4>
-  <div>${park.State}</div>
+<br> <hr>
+  <h4>Location: ${park.LocationName}</h4>
+  <h5>ID: ${park.LocationID}</h5>
+  <div>State: ${park.State}</div>
 `;
   if (park.hasOwnProperty("Visit")) {
       const link = park.Visit;
@@ -17,8 +16,6 @@ function getPark(park) {
   };
   return element;
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -41,8 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   locations.addEventListener("change", showResults);
   parkTypes.addEventListener("change", showResults);
 
-
-
   
   function handleSearchBy(e) {
       if (locationRadio.checked) {
@@ -52,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
           locationLabel.style.display = "none";
           parkTypeLabel.style.display = "block";
       }
-      showResults();
+      results.innerHTML = ""; //CLEAR OUT THE OLD
+
+    //   showResults();
   }
   locationRadio.addEventListener("click", handleSearchBy)
   parkTypeRadio.addEventListener("click", handleSearchBy)
@@ -64,6 +61,4 @@ document.addEventListener("DOMContentLoaded", () => {
   parkTypesArray
       .map(option)
       .forEach(pto => parkTypes.appendChild(pto));
-
-
-});//end loaded 
+});

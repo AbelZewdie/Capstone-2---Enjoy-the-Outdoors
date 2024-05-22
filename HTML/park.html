@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parks</title>
-  <link rel="stylesheet" href="../styles/main.css">
+  <!-- <link rel="stylesheet" href="../styles/main.css"> -->
   <script src="../scripts/main.js"></script>
   <link rel="stylesheet" href="../styles/parks.css">
   <script src="../scripts/parkTypeData.js"></script>
@@ -32,20 +32,23 @@
     </div>
   </header>
 
+  <video class="video-slide active" src="../videos/5.mp4" autoplay muted loop></video>
   <section class="home">
-    <video class="video-slide active" src="../videos/3.mp4" autoplay muted loop></video>
 
+   <div class="filter-type">
     <!-- /////////////////////////////////////////////////////////// -->
     <!-- Dropdown option -->
     <label>
       <input type="radio" name="searchBy" id="locationRadio" checked>
       Location(State)
     </label>
-    <br>
+  &nbsp; &nbsp; &nbsp;
+    <!-- <br> -->
     <label>
       <input type="radio" name="searchBy" id="parkTypeRadio">
       Park Type
     </label>
+  
     <div class="filters">
       <label id="locationLabel">
         Location:
@@ -56,7 +59,8 @@
         <select name="parkTypes" id="parkTypes"></select>
       </label>
     </div>
-    <div id="results">?</div>
+    <div id="results" size="10">?</div>
+  </div>
     <!-- /////////////////////////////////////////////////////////// -->
 
 

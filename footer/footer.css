@@ -29,7 +29,7 @@ ul{
 }
 
 .footer{
-  z-index: 15000;
+  z-index: 25000;
   background-color: #24262b;
   padding: 70px 0;
 }

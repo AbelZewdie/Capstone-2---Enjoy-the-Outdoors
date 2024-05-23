@@ -3,25 +3,18 @@ function getPark(park) {
     element.classList.add("park");
     
 
-    ////////////////////////////////////////////////////////////////
-    // Define the phone description
-    const phoneDescription = "Phone:";
-
     // Check if park.Phone exists and has a value before displaying it
-    const phoneDisplay = park.Phone ? `${phoneDescription} ${park.Phone}` : "";
+    const phoneDisplay = park.Phone ? `<span class="bold">Phone:</span> ${park.Phone}` : "";
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
-    
-    // Define the fax description
-    const faxDescription = "Fax:";
     
     // Check if park.Fax exists and has a value before displaying it
-    const faxDisplay = park.Fax ? `${faxDescription} ${park.Fax}` : "";
+    const faxDisplay = park.Fax ? `<span class="bold">Fax:</span> ${park.Fax}` : "";
     ////////////////////////////////////////////////////////////////
     
 
 // Conditionally build the display for fax and phone together
-let contactInfo = "";
+let contactInfo = '';
 if (faxDisplay) {
   contactInfo += `${faxDisplay}<br>`;
 }
@@ -29,28 +22,23 @@ if (phoneDisplay) {
   contactInfo += phoneDisplay;
 }
 
-///////////////////// For the map //////////////////////////
-
-
-
-
-
+if (park.hasOwnProperty("Visit")) {
+    const link = park.Visit;
+    const text = park.LocationName;
+    element.innerHTML += `
+    <div>Link: <a href="${link}" class="visit-site"> ${text} </a></div><br>
+`;
+};
 
 
     element.innerHTML = `<hr><br>
-  Location: ${park.LocationName}<br>
-  <span class:"bold">ID:</span> ${park.LocationID}<br>
-  State: ${park.State}<br>
-  ${contactInfo ? `<br>${contactInfo}` : ""}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span class="bold"> Location: </span> <span class="thickness">${park.LocationName}</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span class="bold"> ID: </span> <span class="thickness">${park.LocationID}</span><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <span class="bold">State: </span><span class="thickness">${park.State}</span><br>
+    
+    <span class="contact-info"> ${contactInfo ? `<br>${contactInfo}` : ""}
 
 `;
-    if (park.hasOwnProperty("Visit")) {
-        const link = park.Visit;
-        const text = park.LocationName;
-        element.innerHTML += `
-  <div>Link: <a href="${link}" class="visit-site"> ${text} </a></div><br>
-  `;
-    };
     return element;
 }
 

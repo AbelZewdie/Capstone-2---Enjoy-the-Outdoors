@@ -176,7 +176,7 @@ font-weight: 600;
 
 
 /* The slides */
-.slider-navigation{
+/* .slider-navigation{
   z-index: 888;
   position: relative;
   display: flex;
@@ -184,10 +184,10 @@ font-weight: 600;
   align-items: center;
   transform: translateY(200px);
   margin-bottom: 12px;
-}
+} */
 
 /* The slides */
-.slider-navigation .nav-btn{
+/* .slider-navigation .nav-btn{
   width: 12px;
   height: 12px;
   background: #fff;
@@ -207,7 +207,7 @@ font-weight: 600;
 
 .slider-navigation .nav-btn:hover{
   transform: scale(1.2);
-}
+} */
 
 .video-slide{
   position: absolute;

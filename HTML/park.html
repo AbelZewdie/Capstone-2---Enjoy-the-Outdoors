@@ -7,15 +7,21 @@
   <title>Parks</title>
   <!-- <link rel="stylesheet" href="../styles/main.css"> -->
   <script src="../scripts/main.js"></script>
+  <link rel="stylesheet" href="../footer/footer.css">
   <link rel="stylesheet" href="../styles/parks.css">
   <script src="../scripts/parkTypeData.js"></script>
   <script src="../scripts/nationalParkData.js"></script>
   <script src="../scripts/locationData.js"></script>
   <script src="../slideJS/slide.js"></script>
   <script src="../scripts/parks.js"></script>
+  <!-- Footer -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 
 <body>
+
+  <video class="video-slide active" src="../videos/8.mp4" autoplay muted loop></video>
+
 
   <header>
     <a href="./index.html" class="brand">Abel Horizons</a>
@@ -32,26 +38,25 @@
     </div>
   </header>
 
-  <video class="video-slide active" src="../videos/5.mp4" autoplay muted loop></video>
   <section class="home">
-
-   <div class="filter-type">
-    <!-- /////////////////////////////////////////////////////////// -->
-    <!-- Dropdown option -->
-    <label>
-      <input type="radio" name="searchBy" id="locationRadio" checked>
-      Location(State)
-    </label>
-  &nbsp; &nbsp; &nbsp;
-    <!-- <br> -->
-    <label>
-      <input type="radio" name="searchBy" id="parkTypeRadio">
-      Park Type
-    </label>
-  
-    <div class="filters">
-      <label id="locationLabel">
-        Location:
+    
+    <div class="filter-type">
+      <!-- /////////////////////////////////////////////////////////// -->
+      <!-- Dropdown option -->
+      <label>
+        <input type="radio" name="searchBy" id="locationRadio" checked>
+        Location(State)
+      </label>
+      &nbsp; &nbsp; &nbsp;
+      <!-- <br> -->
+      <label>
+        <input type="radio" name="searchBy" id="parkTypeRadio">
+        Park Type
+      </label>
+      
+      <div class="filters">
+        <label id="locationLabel">
+        Location: 
         <select name="locations" id="locations"></select>
       </label>
       <label id="parkTypeLabel" style="display:none">
@@ -67,6 +72,54 @@
 
 
   </section>
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">store locations</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">our brand</a></li>
+           <li><a href="#">newsroom</a></li>
+           <li><a href="#">careers</a></li>
+           <li><a href="#">contact us</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>vacation types</h4>
+         <ul>
+           <li><a href="#">adults only</a></li>
+           <li><a href="#">family</a></li>
+           <li><a href="#">group travel</a></li>
+           <li><a href="#">my time</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+           <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+   </footer>
+
 </body>
 
 </html>

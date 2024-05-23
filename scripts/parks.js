@@ -1,6 +1,7 @@
 function getPark(park) {
     const element = document.createElement("div");
     element.classList.add("park");
+    
 
     ////////////////////////////////////////////////////////////////
     // Define the phone description
@@ -28,11 +29,17 @@ if (phoneDisplay) {
   contactInfo += phoneDisplay;
 }
 
+///////////////////// For the map //////////////////////////
+
+
+
+
+
 
 
     element.innerHTML = `<hr><br>
-  <div class:"spacing">Location: ${park.LocationName}</div>
-  <div><span class:"bold">ID:</span> ${park.LocationID}</div>
+  Location: ${park.LocationName}<br>
+  <span class:"bold">ID:</span> ${park.LocationID}<br>
   State: ${park.State}<br>
   ${contactInfo ? `<br>${contactInfo}` : ""}
 

@@ -353,3 +353,6 @@ section label{
   /* background-color: #fff; */
 }
 
+.bold{
+  font-weight: 600;
+}

@@ -1,4 +1,4 @@
-# `ABEL HORIZONS` | Where wanderlust meets discovery!
+# `ABEL HORIZONS` | Enjoy the outdoor!
 
 ## Home Page | `First Slide`
 * Stunning visuals showcasing a variety of travel destinations immediately capture **attention and inspire wanderlust**. <hr>

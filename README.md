@@ -10,7 +10,7 @@
 <img alt="Home Page" width=100% src="../Capstone 2 - Enjoy the Outdoors/screenshots/mainPage2.png">
 
 ## Home Page | `Third Slide`
-* Color schemes and fonts that evoke a sense of **adventure**, **relaxation**, or **luxury** depending on your target audience. <hr>
+* Color scheme and fonts that evoke a sense of **adventure**, **relaxation**, or **luxury** depending on your target audience. <hr>
 <img alt="Home Page" width=100% src="../Capstone 2 - Enjoy the Outdoors/screenshots/mainPage3.png">
 
 ## Mountain Page | `Mountain Search`

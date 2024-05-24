@@ -121,6 +121,7 @@ font-weight: 600;
 
 .home .content p{
   margin-bottom: 65px;
+  text-shadow: 1px 1px black;
 }
 
 /* Read more */

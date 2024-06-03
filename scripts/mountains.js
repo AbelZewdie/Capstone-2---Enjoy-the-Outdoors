@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     mountainResults.innerHTML = `
 <br><h3>${mountain.name}</h3><br>
-<img src="../images/${mountain.img}" class="mountain-image"> <br><br>
+<img src="./images/${mountain.img}" class="mountain-image"> <br><br>
 <span class="bold">Elevation:</span> ${mountain.elevation} feet<br>
 <span class="bold">Lattitute/Longitude:</span> (${mountain.coords.lat}, ${mountain.coords.lng}) <br>
 <span class="bold">Effort:</span> ${mountain.effort}<br> <br> <p> ${mountain.desc} </p><br>
